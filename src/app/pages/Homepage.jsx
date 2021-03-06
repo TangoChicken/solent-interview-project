@@ -1,17 +1,14 @@
-import React from 'react';
-import Example from 'Components/Example/Example';
-import { StyledStaffFinder } from '../components/StaffFinder/StaffFinder.styled';
+import React from "react";
+import  StaffFinder from "Components/StaffFinder/StaffFinder";
 
 const Homepage = () => {
-    return (
-        <>
-            <StyledStaffFinder />
-        </>
-    );
+  return (
+    <>
+      <StaffFinder />
+    </>
+  );
 };
 
 export default Homepage;
 
-export { 
-    Homepage
-};
+export { Homepage };

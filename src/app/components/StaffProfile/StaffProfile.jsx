@@ -7,8 +7,8 @@ class StaffProfile extends React.Component {
     render() {
         return (
             <>
-                <StyledSearch />
-                <StyledProfile />
+                <StyledSearch className='StyledSearch' />
+                <StyledProfile className='StyledProfile' />
             </>
         );
     };

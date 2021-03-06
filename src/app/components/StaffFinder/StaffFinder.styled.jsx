@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import StaffFinder from "./StaffFinder";
 
-export const StyledStaffFinder = styled(StaffFinder)`
+export const FinderContainer = styled.section`
   display: flex;
   width: 100%;
   max-width: var(--max-width);
