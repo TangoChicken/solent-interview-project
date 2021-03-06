@@ -31,7 +31,16 @@ const CONFIG = {
             },
             {
                 test: /\.svg$/,
-                use: ['@svgr/webpack']
+                //use: ['@svgr/webpack']
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[hash].[ext]',
+                            outputPath: 'static/icons/'
+                        }
+                    }
+                ]
             },
             {
                 test: /\.css$/,
