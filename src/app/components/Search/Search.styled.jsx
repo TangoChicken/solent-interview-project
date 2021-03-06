@@ -1,18 +1,20 @@
 import styled from "styled-components";
-import Search from "./Search";
+import backgroundImageURL from 'Public/images/background.jpg';
+import searchIconURL from 'Public/icons/search.svg';
+import {env} from 'Global/Global.styled';
 
-export const StyledSearch = styled(Search)`
+export const SearchContainer = styled.section`
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: 100%;
   height: 21.9rem;
-  background: url("images/background.jpg");
+  background: url("${backgroundImageURL}");
   background-size: cover;
   background-position: center;
   color: var(--lightest);
 
-  @media (max-width: var(--collapse-width)) {
+  @media (max-width: ${env.collapseWidth}) {
     height: 17.9rem;
     /* Darken the background in mobile view */
     background-color: rgba(0, 0, 0, 0.3);
@@ -25,7 +27,7 @@ export const Header = styled.section`
   width: 27.8rem;
   padding: 0 1.3rem;
 
-  @media (max-width: var(--collapse-width)) {
+  @media (max-width: ${env.collapseWidth}) {
     text-align: center;
   }
 `;
@@ -36,7 +38,7 @@ export const HeaderTitle = styled.h1`
   font-weight: bold;
   line-height: 1em;
 
-  @media (max-width: var(--collapse-width)) {
+  @media (max-width: ${env.collapseWidth}) {
     font-size: 3em;
   }
 `;
@@ -46,7 +48,7 @@ export const HeaderSubTitle = styled.h2`
   font-size: 1.1em;
   font-weight: normal;
 
-  @media (max-width: var(--collapse-width)) {
+  @media (max-width: ${env.collapseWidth}) {
     font-size: 1.2em;
   }
 `;
@@ -59,7 +61,7 @@ export const SearchBar = styled.input`
   margin: 1.8rem 0 2.6rem 0;
 
   /* Add search icon to the right of the search bar */
-  background-image: url("icons/seach.svg");
+  background-image: url("${searchIconURL}");
   background-repeat: no-repeat;
   background-size: 1rem;
   background-position: right 1rem center;
@@ -72,7 +74,7 @@ export const SearchBar = styled.input`
     color: var(--light);
   }
 
-  @media (max-width: var(--collapse-width)) {
+  @media (max-width: ${env.collapseWidth}) {
     padding: 0.6rem 3rem 0.9rem 0.8rem;
     margin: 1.8rem 0 1.5rem 0;
     background-size: 1.6rem;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Result from "./Result";
+import {env} from 'Global/Global.styled';
 
 export const StyledResult = styled(Result)`
   display: flex;
@@ -21,7 +22,7 @@ export const StyledResult = styled(Result)`
   border-radius: 0.2rem;
   cursor: pointer;
 
-  @media (max-width: var(--collapse-width)) {
+  @media (max-width: ${env.collapseWidth}) {
     height: 3.8rem;
     margin: 0.8rem 0;
 

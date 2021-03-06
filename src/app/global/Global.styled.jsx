@@ -9,7 +9,6 @@ export default createGlobalStyle`
         --lighter:#ececec;
         --lightest: #fff;
 
-        --collapse-width: 28rem;
         --max-width: 800px;
         --min-width: 21rem;
     }
@@ -24,3 +23,7 @@ export default createGlobalStyle`
         font-family: Calibri, 'Trebuchet MS', sans-serif;
     }
 `;
+
+export const env = {
+    collapseWidth: "28rem",
+};

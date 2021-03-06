@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Listing from "./Listing";
+import {env} from 'Global/Global.styled';
 
 export const StyledListing = styled(Listing)`
   box-sizing: border-box;
@@ -7,7 +8,7 @@ export const StyledListing = styled(Listing)`
   width: 100%;
   max-width: 27.8rem;
 
-  @media (max-width: var(--collapse-width)) {
+  @media (max-width: ${env.collapseWidth}) {
     padding: 0.6rem 1.3rem;
   }
 `;
