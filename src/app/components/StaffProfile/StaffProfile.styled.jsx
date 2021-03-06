@@ -5,6 +5,7 @@ export const StaffProfileContainer = styled.section`
   width: 100%;
   max-width: var(--max-width);
   min-width: var(--min-width);
+  min-height:100vh;
   margin: 0 auto;
 
   background: var(--lighter);

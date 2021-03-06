@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Listing from "./Listing";
 import {env} from 'Global/Global.styled';
 
 export const ListingContainer = styled.section`
