@@ -8,6 +8,8 @@ export default createGlobalStyle`
         --light:#c5c5c5;
         --lighter:#ececec;
         --lightest: #fff;
+
+        --collapse-width: 28rem;
     }
 
     body {
