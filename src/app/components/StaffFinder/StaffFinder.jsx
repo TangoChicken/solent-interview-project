@@ -7,18 +7,20 @@ import { FinderContainer } from "./StaffFinder.styled";
 class StaffFinder extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { searchTerm: ""};
+    this.state = { searchTerm: "" };
+    this.handleSearchChanged = this.handleSearchChanged.bind(this);
   }
 
-  onSearchChanged(newValue) {
+  handleSearchChanged(newValue) {
     this.setState({ searchTerm: newValue });
   }
 
   render() {
+    const { searchTerm } = this.state;
     return (
       <FinderContainer>
-        <Search onChange={this.onSearchChanged} />
-        <Listing />
+        <Search onChange={this.handleSearchChanged} />
+        <Listing searchTerm={searchTerm} />
       </FinderContainer>
     );
   }

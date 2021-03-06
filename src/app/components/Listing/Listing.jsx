@@ -23,20 +23,30 @@ class Listing extends React.Component {
     this.getRandomUsers(10);
   }
 
-  renderResults(randomUsers) {
+  renderResults(randomUsers, searchTerm) {
     const results = randomUsers.results;
     if (results) {
-      console.log(results);
-      return results.map((result, index) => {
+      console.log(searchTerm);
+      const filtered = results.filter(result => {
+        console.log(result);
+        const fullName = `${result.name.first} ${result.name.last}`;
+        return fullName.toLowerCase().includes(searchTerm.toLowerCase())
+      });
+      const mapped = filtered.map((result, index) => {
         return <Result key={index} result={result} />;
       });
+      
+      return mapped;
     }
   }
 
   render() {
     const { randomUsers } = this.state;
+    const { searchTerm } = this.props;
     return (
-      <ListingContainer>{this.renderResults(randomUsers)}</ListingContainer>
+      <ListingContainer>
+        {this.renderResults(randomUsers, searchTerm)}
+      </ListingContainer>
     );
   }
 }
