@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Search } from "../Search/Search";
-import { StyledListing } from "../Listing/Listing.styled";
+import { Listing } from "../Listing/Listing";
 import { FinderContainer } from "./StaffFinder.styled";
 
 class StaffFinder extends React.Component {
@@ -9,7 +9,7 @@ class StaffFinder extends React.Component {
     return (
       <FinderContainer>
         <Search />
-        <StyledListing />
+        <Listing />
       </FinderContainer>
     );
   }

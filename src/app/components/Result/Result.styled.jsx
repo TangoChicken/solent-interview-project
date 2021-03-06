@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import Result from "./Result";
+import circleArrowIconURL from 'Public/icons/circle-arrow.svg';
 import {env} from 'Global/Global.styled';
 
-export const StyledResult = styled(Result)`
+export const ResultContainer = styled.div`
   display: flex;
   align-items: center;
   box-sizing: border-box;
@@ -14,7 +14,7 @@ export const StyledResult = styled(Result)`
 
   background-color: var(--lightest);
   /* Add circle arrow icon to right of result */
-  background-image: url(icons/circle-arrow.svg);
+  background-image: url('${circleArrowIconURL}');
   background-repeat: no-repeat;
   background-size: 1.5rem;
   background-position: right 0.5rem center;

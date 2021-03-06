@@ -1,16 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import { ProfileThumb } from './Result.styled';
+import { ResultContainer, ProfileThumb } from "./Result.styled";
 
 class Result extends React.Component {
-    render() {
-        return (
-            <>
-                <ProfileThumb/>
-                {/* Name */}
-            </>
-        );
-    };
+  render() {
+    return (
+      <ResultContainer>
+        <ProfileThumb src="https://randomuser.me/api/portraits/thumb/men/75.jpg" />
+        {"Paul Weaver"}
+      </ResultContainer>
+    );
+  }
 }
 
 export default Result;
+export { Result };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Listing from "./Listing";
 import {env} from 'Global/Global.styled';
 
-export const StyledListing = styled(Listing)`
+export const ListingContainer = styled.section`
   box-sizing: border-box;
   padding: 1.7rem 1.3rem;
   width: 100%;
