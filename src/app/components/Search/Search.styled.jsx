@@ -19,7 +19,7 @@ export const SearchContainer = styled.section`
     /* Darken the background in mobile view */
     background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: overlay;
-    ${props => props.profile ? "display: none;" : ""}
+    ${props => props.$profile ? "display: none;" : ""}
   }
 `;
 

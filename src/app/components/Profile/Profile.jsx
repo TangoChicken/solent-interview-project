@@ -11,15 +11,19 @@ import {
 } from "./Profile.styled";
 
 class Profile extends React.Component {
+  
   render() {
+    console.log(this.props);
     return (
       <ProfileContainer>
-        <ProfilePicture src="https://randomuser.me/api/portraits/men/75.jpg" />
-        <ProfileName>Paul Weaver</ProfileName>
+        <ProfilePicture src={this.props.result.picture.large} />
+        <ProfileName>{`${this.props.result.name.first} ${this.props.result.name.last}`}</ProfileName>
         <ProfileDetails>
-          <ProfileEmail>paul.weaver@example.com</ProfileEmail>
-          <ProfileDob>4/5/1990</ProfileDob>
-          <ProfilePhone>(149)-409-0442</ProfilePhone>
+          <ProfileEmail>{this.props.result.email}</ProfileEmail>
+          <ProfileDob>
+            {new Date(this.props.result.dob.date).toLocaleDateString()}
+          </ProfileDob>
+          <ProfilePhone>{this.props.result.phone}</ProfilePhone>
         </ProfileDetails>
       </ProfileContainer>
     );

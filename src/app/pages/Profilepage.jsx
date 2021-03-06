@@ -1,10 +1,10 @@
 import React from "react";
 import StaffProfile from "Components/StaffProfile/StaffProfile";
 
-const Profilepage = () => {
+const Profilepage = (props) => {
   return (
     <>
-      <StaffProfile />
+      <StaffProfile result={props.location.state} />
     </>
   );
 };

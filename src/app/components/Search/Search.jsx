@@ -20,7 +20,7 @@ class Search extends React.Component {
 
   render() {
     return (
-      <SearchContainer profile={this.props.profile}>
+      <SearchContainer $profile={this.props.profile}>
         <Header className="Header">
           <HeaderTitle>Find a member of staff</HeaderTitle>
           <HeaderSubTitle>Use the search box to get started</HeaderSubTitle>
