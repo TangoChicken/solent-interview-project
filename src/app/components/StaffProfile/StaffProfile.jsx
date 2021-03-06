@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { StaffProfileContainer } from './StaffProfile.styled';
-import { Search } from '../Search/Search';
+import { StaffProfileContainer} from './StaffProfile.styled';
 import { Profile } from '../Profile/Profile';
+import { Search } from '../Search/Search';
 
 class StaffProfile extends React.Component {
     render() {
         return (
             <StaffProfileContainer>
-                <Search className='StyledSearch' />
+                <Search profile className='StyledSearch' />
                 <Profile className='StyledProfile' />
             </StaffProfileContainer>
         );

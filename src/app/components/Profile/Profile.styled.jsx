@@ -20,11 +20,19 @@ export const ProfilePicture = styled.img`
   width: 5.6rem;
   background: var(--lightest);
   border: 1px solid #cecece;
+
+  @media (max-width: ${env.collapseWidth}) {
+    width: 7rem;
+  }
 `;
 
 export const ProfileName = styled.h1`
   font-size: 1.5rem;
   margin: 0.1em;
+
+  @media (max-width: ${env.collapseWidth}) {
+    font-size: 2rem;
+  }
 `;
 
 export const ProfileDetails = styled.section`
@@ -34,6 +42,12 @@ export const ProfileDetails = styled.section`
   font-size: 0.9rem;
   margin-top: 0.5rem;
   align-items: center;
+
+  @media (max-width: ${env.collapseWidth}) {
+    margin-top: 1.3rem;
+    font-size: 1.4rem;
+    flex-direction: column;
+  }
 `;
 
 const detailsShared = css`
@@ -42,17 +56,25 @@ const detailsShared = css`
   background-position: left center;
 `;
 
+const detailsMedia = css`
+  @media (max-width: ${env.collapseWidth}) {
+    padding: 1.3em 0 1.2em 0;
+    background-position: center top;
+  }
+`;
+
 export const ProfileEmail = styled.div`
   ${detailsShared}
-
   background-size: 1.2em;
   background-image: url("${emailIconURL}");
+  ${detailsMedia}
 `;
 
 export const ProfileDob = styled.div`
   ${detailsShared}
   background-size: 1.1em;
   background-image: url("${dobIconURL}");
+  ${detailsMedia}
 `;
 
 export const ProfilePhone = styled.div`
@@ -60,4 +82,5 @@ export const ProfilePhone = styled.div`
   background-size: 0.8em;
   background-image: url("${phoneIconURL}");
   background-position: left 0.3em center;
+  ${detailsMedia}
 `;

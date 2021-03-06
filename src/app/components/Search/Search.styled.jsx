@@ -9,7 +9,7 @@ export const SearchContainer = styled.section`
   align-items: flex-end;
   width: 100%;
   height: 21.9rem;
-  background: url("${backgroundImageURL}");
+  background: url('${backgroundImageURL}');
   background-size: cover;
   background-position: center;
   color: var(--lightest);
@@ -19,6 +19,7 @@ export const SearchContainer = styled.section`
     /* Darken the background in mobile view */
     background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: overlay;
+    ${props => props.profile ? "display: none;" : ""}
   }
 `;
 

@@ -14,12 +14,12 @@ class Profile extends React.Component {
   render() {
     return (
       <ProfileContainer>
-        <ProfilePicture />
-        <ProfileName></ProfileName>
+        <ProfilePicture src="https://randomuser.me/api/portraits/men/75.jpg" />
+        <ProfileName>Paul Weaver</ProfileName>
         <ProfileDetails>
-          <ProfileEmail></ProfileEmail>
-          <ProfileDob></ProfileDob>
-          <ProfilePhone></ProfilePhone>
+          <ProfileEmail>paul.weaver@example.com</ProfileEmail>
+          <ProfileDob>4/5/1990</ProfileDob>
+          <ProfilePhone>(149)-409-0442</ProfilePhone>
         </ProfileDetails>
       </ProfileContainer>
     );
