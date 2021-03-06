@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { HeaderTitle, HeaderSubTitle, SearchBar } from './Search.styled';
+import { Header, HeaderTitle, HeaderSubTitle, SearchBar } from './Search.styled';
 
 class Search extends React.Component {
     render() {

@@ -10,6 +10,8 @@ export default createGlobalStyle`
         --lightest: #fff;
 
         --collapse-width: 28rem;
+        --max-width: 800px;
+        --min-width: 21rem;
     }
 
     body {
