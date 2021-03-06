@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Wrapper, HelloBox, Image } from './Result.styled';
+import { ProfileThumb } from './Result.styled';
 
 class Result extends React.Component {
     render() {
