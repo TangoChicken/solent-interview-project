@@ -6,8 +6,8 @@ class Result extends React.Component {
   render() {
     return (
       <ResultContainer>
-        <ProfileThumb src="https://randomuser.me/api/portraits/thumb/men/75.jpg" />
-        {"Paul Weaver"}
+        <ProfileThumb src={this.props.result.picture.thumbnail} />
+        {`${this.props.result.name.first} ${this.props.result.name.last}`}
       </ResultContainer>
     );
   }
