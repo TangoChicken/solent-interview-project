@@ -1,13 +1,30 @@
-import React from 'react';
+import React from "react";
 
-import { } from './Profile.styled';
+import {
+  ProfileContainer,
+  ProfilePicture,
+  ProfileName,
+  ProfileDetails,
+  ProfileEmail,
+  ProfileDob,
+  ProfilePhone,
+} from "./Profile.styled";
 
 class Profile extends React.Component {
-    render() {
-        return (
-            <Element></Element>
-        );
-    };
+  render() {
+    return (
+      <ProfileContainer>
+        <ProfilePicture />
+        <ProfileName></ProfileName>
+        <ProfileDetails>
+          <ProfileEmail></ProfileEmail>
+          <ProfileDob></ProfileDob>
+          <ProfilePhone></ProfilePhone>
+        </ProfileDetails>
+      </ProfileContainer>
+    );
+  }
 }
 
 export default Profile;
+export { Profile };

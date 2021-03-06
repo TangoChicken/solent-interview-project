@@ -1,17 +1,19 @@
 import React from 'react';
 
-import { StyledSearch } from '../Search/Search.styled';
-import { StyledProfile } from '../Profile/Profile.styled';
+import { StaffProfileContainer } from './StaffProfile.styled';
+import { Search } from '../Search/Search';
+import { Profile } from '../Profile/Profile';
 
 class StaffProfile extends React.Component {
     render() {
         return (
-            <>
-                <StyledSearch className='StyledSearch' />
-                <StyledProfile className='StyledProfile' />
-            </>
+            <StaffProfileContainer>
+                <Search className='StyledSearch' />
+                <Profile className='StyledProfile' />
+            </StaffProfileContainer>
         );
     };
 }
 
 export default StaffProfile;
+export { StaffProfile };
