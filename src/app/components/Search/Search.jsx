@@ -9,6 +9,14 @@ import {
 } from "./Search.styled";
 
 class Search extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.props.onChange(event.target.value);
+  }
 
   render() {
     return (
@@ -16,7 +24,10 @@ class Search extends React.Component {
         <Header className="Header">
           <HeaderTitle>Find a member of staff</HeaderTitle>
           <HeaderSubTitle>Use the search box to get started</HeaderSubTitle>
-          <SearchBar placeholder="Start typing..."></SearchBar>
+          <SearchBar
+            onChange={this.handleChange}
+            placeholder="Start typing..."
+          ></SearchBar>
         </Header>
       </SearchContainer>
     );
