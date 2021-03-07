@@ -17,6 +17,8 @@ const Search = (props) => {
         <SearchBar
           onChange={(event) => props.onChange(event.target.value)}
           placeholder="Start typing..."
+          role="search"
+          aria-label="Search for a staff member"
         ></SearchBar>
       </Header>
     </SearchContainer>

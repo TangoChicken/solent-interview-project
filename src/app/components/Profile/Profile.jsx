@@ -11,12 +11,13 @@ import {
 } from "./Profile.styled";
 
 const Profile = (props) => {
-  const picture = props.result.picture;
   const name = props.result.name;
+  const fullName = `${name.first} ${name.last}`;
+  const picture = props.result.picture;
   return (
     <ProfileContainer>
-      <ProfilePicture src={picture.large} />
-      <ProfileName>{`${name.first} ${name.last}`}</ProfileName>
+      <ProfilePicture src={picture.large} alt={`Photo of ${fullName}`} />
+      <ProfileName>{fullName}</ProfileName>
       <ProfileDetails>
         <ProfileEmail>{props.result.email}</ProfileEmail>
         <ProfileDob>

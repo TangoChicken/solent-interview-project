@@ -5,6 +5,7 @@ import { ResultContainer, ProfileThumb } from "./Result.styled";
 
 const Result = (props) => {
   const name = props.result.name;
+  const fullName = `${name.first} ${name.last}`;
   const picture = props.result.picture;
   return (
     <Link
@@ -12,10 +13,11 @@ const Result = (props) => {
         pathname: "/Profile",
         state: props.result,
       }}
+      aria-label={`Profile for ${fullName}`}
     >
       <ResultContainer>
-        <ProfileThumb src={picture.medium} />
-        {`${name.first} ${name.last}`}
+        <ProfileThumb src={picture.medium} alt={`Photo of ${fullName}`} />
+        {fullName}
       </ResultContainer>
     </Link>
   );

@@ -29,14 +29,14 @@ const Listing = (props) => {
         return fullName.toLowerCase().includes(props.searchTerm.toLowerCase());
       });
       const mapped = filtered.map((result, index) => {
-        return <Result key={index} result={result} />;
+        return <Result role="listitem" key={index} result={result} />;
       });
 
       return mapped;
     }
   };
 
-  return <ListingContainer>{renderResults()}</ListingContainer>;
+  return <ListingContainer role="list">{renderResults()}</ListingContainer>;
 };
 
 export default Listing;
