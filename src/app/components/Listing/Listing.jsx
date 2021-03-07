@@ -1,35 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Result } from "../Result/Result";
 import { ListingContainer } from "./Listing.styled";
 
-class Listing extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { randomUsers: {} };
-  }
+const Listing = (props) => {
+  const [randomUsers, setRandomUsers] = useState({});
+  const resultCount = 10;
 
-  async getRandomUsers(amount) {
+  useEffect(() => {
+    getRandomUsers(resultCount);
+  }, []);
+
+  const getRandomUsers = async (amount) => {
     const response = await fetch(
       `https://randomuser.me/api/?results=${amount}`
     );
     const randomUsers = await response.json();
-    this.setState({ randomUsers: randomUsers });
-  }
+    setRandomUsers(randomUsers);
+  };
 
-  componentDidMount() {
-    console.log("ComponentMount");
-    this.getRandomUsers(10);
-  }
-
-  renderResults(randomUsers, searchTerm) {
+  const renderResults = () => {
     const results = randomUsers.results;
     if (results) {
-      console.log(searchTerm);
       const filtered = results.filter((result) => {
-        console.log(result);
         const fullName = `${result.name.first} ${result.name.last}`;
-        return fullName.toLowerCase().includes(searchTerm.toLowerCase());
+        return fullName.toLowerCase().includes(props.searchTerm.toLowerCase());
       });
       const mapped = filtered.map((result, index) => {
         return <Result key={index} result={result} />;
@@ -37,18 +32,10 @@ class Listing extends React.Component {
 
       return mapped;
     }
-  }
+  };
 
-  render() {
-    const { randomUsers } = this.state;
-    const { searchTerm } = this.props;
-    return (
-      <ListingContainer>
-        {this.renderResults(randomUsers, searchTerm)}
-      </ListingContainer>
-    );
-  }
-}
+  return <ListingContainer>{renderResults()}</ListingContainer>;
+};
 
 export default Listing;
 export { Listing };

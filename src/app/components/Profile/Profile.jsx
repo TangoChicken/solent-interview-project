@@ -10,23 +10,23 @@ import {
   ProfilePhone,
 } from "./Profile.styled";
 
-class Profile extends React.Component {
-  render() {
-    return (
-      <ProfileContainer>
-        <ProfilePicture src={this.props.result.picture.large} />
-        <ProfileName>{`${this.props.result.name.first} ${this.props.result.name.last}`}</ProfileName>
-        <ProfileDetails>
-          <ProfileEmail>{this.props.result.email}</ProfileEmail>
-          <ProfileDob>
-            {new Date(this.props.result.dob.date).toLocaleDateString()}
-          </ProfileDob>
-          <ProfilePhone>{this.props.result.phone}</ProfilePhone>
-        </ProfileDetails>
-      </ProfileContainer>
-    );
-  }
-}
+const Profile = (props) => {
+  const picture = props.result.picture;
+  const name = props.result.name;
+  return (
+    <ProfileContainer>
+      <ProfilePicture src={picture.large} />
+      <ProfileName>{`${name.first} ${name.last}`}</ProfileName>
+      <ProfileDetails>
+        <ProfileEmail>{props.result.email}</ProfileEmail>
+        <ProfileDob>
+          {new Date(props.result.dob.date).toLocaleDateString()}
+        </ProfileDob>
+        <ProfilePhone>{props.result.phone}</ProfilePhone>
+      </ProfileDetails>
+    </ProfileContainer>
+  );
+};
 
 export default Profile;
 export { Profile };
