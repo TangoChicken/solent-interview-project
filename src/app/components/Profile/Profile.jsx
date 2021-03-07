@@ -11,9 +11,7 @@ import {
 } from "./Profile.styled";
 
 class Profile extends React.Component {
-  
   render() {
-    console.log(this.props);
     return (
       <ProfileContainer>
         <ProfilePicture src={this.props.result.picture.large} />

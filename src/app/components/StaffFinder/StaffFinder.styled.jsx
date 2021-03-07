@@ -5,11 +5,12 @@ export const FinderContainer = styled.section`
   width: 100%;
   max-width: var(--max-width);
   min-width: var(--min-width);
-  min-height:100vh;
+  /* Ensure the container always fills viewport height */
+  min-height: 100vh;
   margin: 0 auto;
-  
+
   background: var(--lighter);
-  
+
   flex-direction: column;
   align-items: center;
 `;

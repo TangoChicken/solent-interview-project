@@ -11,6 +11,7 @@ export const ListingContainer = styled.section`
     padding: 0.6rem 1.3rem;
   }
 
+  /* Remove default link styling for Result buttons */
   a:link,
   a:visited,
   a:hover,

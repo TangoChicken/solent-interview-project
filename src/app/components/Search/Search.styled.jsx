@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import backgroundImageURL from 'Public/images/background.jpg';
-import searchIconURL from 'Public/icons/search.svg';
-import {env} from 'Global/Global.styled';
+import backgroundImageURL from "Public/images/background.jpg";
+import searchIconURL from "Public/icons/search.svg";
+import { env } from "Global/Global.styled";
 
 export const SearchContainer = styled.section`
   display: flex;
@@ -9,7 +9,7 @@ export const SearchContainer = styled.section`
   align-items: flex-end;
   width: 100%;
   height: 21.9rem;
-  background: url('${backgroundImageURL}');
+  background: url("${backgroundImageURL}");
   background-size: cover;
   background-position: center;
   color: var(--lightest);
@@ -20,7 +20,7 @@ export const SearchContainer = styled.section`
     background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: overlay;
     /* Hide the search component in mobile profile view */
-    ${props => props.$profile ? "display: none;" : ""}
+    ${(props) => (props.$profile ? "display: none;" : "")}
   }
 `;
 

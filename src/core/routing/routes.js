@@ -12,5 +12,4 @@ export default [
     exact: true,
     component: Profile,
   },
-
 ];

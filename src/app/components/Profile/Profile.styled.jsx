@@ -50,12 +50,14 @@ export const ProfileDetails = styled.section`
   }
 `;
 
+/* Properties shared across child elements of ProfileDetails */
 const detailsShared = css`
   padding: 1em 0 1em 1.5em;
   background-repeat: no-repeat;
   background-position: left center;
 `;
 
+/* Mobile properties for child elements of ProfileDetails */
 const detailsMedia = css`
   @media (max-width: ${env.collapseWidth}) {
     padding: 1.3em 0 1.2em 0;

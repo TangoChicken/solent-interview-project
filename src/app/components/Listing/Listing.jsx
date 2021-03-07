@@ -14,7 +14,6 @@ class Listing extends React.Component {
       `https://randomuser.me/api/?results=${amount}`
     );
     const randomUsers = await response.json();
-    // console.log(randomUsers);
     this.setState({ randomUsers: randomUsers });
   }
 
@@ -27,15 +26,15 @@ class Listing extends React.Component {
     const results = randomUsers.results;
     if (results) {
       console.log(searchTerm);
-      const filtered = results.filter(result => {
+      const filtered = results.filter((result) => {
         console.log(result);
         const fullName = `${result.name.first} ${result.name.last}`;
-        return fullName.toLowerCase().includes(searchTerm.toLowerCase())
+        return fullName.toLowerCase().includes(searchTerm.toLowerCase());
       });
       const mapped = filtered.map((result, index) => {
         return <Result key={index} result={result} />;
       });
-      
+
       return mapped;
     }
   }

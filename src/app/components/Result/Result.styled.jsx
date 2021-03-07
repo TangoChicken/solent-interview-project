@@ -29,6 +29,7 @@ export const ResultContainer = styled.div`
     padding: 0.3rem 0.6rem;
     margin: 0.9rem 0;
 
+    /* Reposition circle arrow icon for mobile view */
     background-size: 1.9rem;
     background-position: right 0.6rem center;
 

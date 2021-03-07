@@ -1,7 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
-
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+    /* Theme colours and shared values */
     :root {
         --dark:#8e8e8e;
         --darker:#575757;
@@ -24,6 +24,7 @@ export default createGlobalStyle`
     }
 `;
 
+/* Environment variables for media query preprocessing */
 export const env = {
-    collapseWidth: "28rem",
+  collapseWidth: "28rem",
 };
