@@ -19,6 +19,7 @@ export const SearchContainer = styled.section`
     /* Darken the background in mobile view */
     background-color: rgba(0, 0, 0, 0.3);
     background-blend-mode: overlay;
+    /* Hide the search component in mobile profile view */
     ${props => props.$profile ? "display: none;" : ""}
   }
 `;
@@ -40,6 +41,7 @@ export const HeaderTitle = styled.h1`
   line-height: 1em;
 
   @media (max-width: ${env.collapseWidth}) {
+    margin: 1.1rem 0;
     font-size: 3em;
   }
 `;
@@ -79,5 +81,6 @@ export const SearchBar = styled.input`
     padding: 0.6rem 3rem 0.9rem 0.8rem;
     margin: 1.8rem 0 1.5rem 0;
     background-size: 1.6rem;
+    border-radius: 0.5rem;
   }
 `;

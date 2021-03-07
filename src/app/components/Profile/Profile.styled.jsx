@@ -79,7 +79,7 @@ export const ProfileDob = styled.div`
 
 export const ProfilePhone = styled.div`
   ${detailsShared}
-  background-size: 0.8em;
+  background-size: 0.75em;
   background-image: url("${phoneIconURL}");
   background-position: left 0.3em center;
   ${detailsMedia}

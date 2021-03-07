@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {env} from 'Global/Global.styled';
+import { env } from "Global/Global.styled";
 
 export const ListingContainer = styled.section`
   box-sizing: border-box;
@@ -9,5 +9,13 @@ export const ListingContainer = styled.section`
 
   @media (max-width: ${env.collapseWidth}) {
     padding: 0.6rem 1.3rem;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: var(--darker);
+    text-decoration: none;
   }
 `;
