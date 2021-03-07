@@ -5,15 +5,17 @@ import { ListingContainer } from "./Listing.styled";
 
 const Listing = (props) => {
   const [randomUsers, setRandomUsers] = useState({});
+  const fields = ["name", "email", "dob", "phone", "picture"];
   const resultCount = 10;
 
+  /* Get random users from API after first render */
   useEffect(() => {
-    getRandomUsers(resultCount);
+    getRandomUsers();
   }, []);
 
-  const getRandomUsers = async (amount) => {
+  const getRandomUsers = async () => {
     const response = await fetch(
-      `https://randomuser.me/api/?results=${amount}`
+      `https://randomuser.me/api/?results=${resultCount}&inc=${fields.join()}`
     );
     const randomUsers = await response.json();
     setRandomUsers(randomUsers);
