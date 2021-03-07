@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FinderContainer = styled.section`
+export const Container = styled.section`
   display: flex;
   width: 100%;
   max-width: var(--max-width);

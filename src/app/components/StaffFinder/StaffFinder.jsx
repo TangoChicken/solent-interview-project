@@ -2,7 +2,7 @@ import React from "react";
 
 import { Search } from "../Search/Search";
 import { Listing } from "../Listing/Listing";
-import { FinderContainer } from "./StaffFinder.styled";
+import { Container } from "./StaffFinder.styled";
 
 class StaffFinder extends React.Component {
   constructor(props) {
@@ -18,10 +18,10 @@ class StaffFinder extends React.Component {
   render() {
     const { searchTerm } = this.state;
     return (
-      <FinderContainer>
+      <Container>
         <Search onChange={this.handleSearchChanged} />
         <Listing searchTerm={searchTerm} />
-      </FinderContainer>
+      </Container>
     );
   }
 }
