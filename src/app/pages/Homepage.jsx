@@ -1,5 +1,5 @@
 import React from "react";
-import StaffFinder from "Components/StaffFinder/StaffFinder";
+import { StaffFinder } from "Components/StaffFinder/StaffFinder";
 
 const Homepage = () => {
   return (
@@ -10,5 +10,3 @@ const Homepage = () => {
 };
 
 export default Homepage;
-
-export { Homepage };

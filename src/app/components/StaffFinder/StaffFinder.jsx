@@ -7,7 +7,7 @@ import { Container } from "./StaffFinder.styled";
 /**
  * Container component for the home page
  */
-const StaffFinder = () => {
+export const StaffFinder = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
     <Container>
@@ -16,6 +16,3 @@ const StaffFinder = () => {
     </Container>
   );
 };
-
-export default StaffFinder;
-export { StaffFinder };

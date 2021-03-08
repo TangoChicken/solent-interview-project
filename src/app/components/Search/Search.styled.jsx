@@ -59,19 +59,19 @@ export const HeaderSubTitle = styled.h2`
 export const SearchBar = styled.input`
   box-sizing: border-box;
   width: 100%;
-  padding: 0.2rem 0.8rem 0.5rem;
+  padding: 0.3rem 0.8rem 0.5rem;
   border: 1px solid var(--dark);
-  margin: 1.8rem 0 2.6rem 0;
+  margin: 1.8rem 0 2.4rem 0;
 
   /* Add search icon to the right of the search bar */
   background-image: url("${searchIconURL}");
   background-repeat: no-repeat;
-  background-size: 1rem;
+  background-size: 0.95rem;
   background-position: right 1rem center;
 
   color: var(--darker);
-  font-size: 1.1em;
-  border-radius: 0.3em;
+  font-size: 1.2em;
+  border-radius: 0.3rem;
 
   &::placeholder {
     color: var(--light);

@@ -11,9 +11,9 @@ import {
 } from "./Profile.styled";
 
 /**
- * A profile page containing basic details for a specific result
+ * A profile section containing basic details for a specific result
  */
-const Profile = (props) => {
+export const Profile = (props) => {
   const name = props.result.name;
   const fullName = `${name.first} ${name.last}`;
   const picture = props.result.picture;
@@ -31,6 +31,3 @@ const Profile = (props) => {
     </ProfileContainer>
   );
 };
-
-export default Profile;
-export { Profile };

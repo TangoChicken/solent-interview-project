@@ -6,7 +6,7 @@ import { ResultContainer, ProfileThumb } from "./Result.styled";
 /**
  * Single result that links to the respective profile page
  */
-const Result = (props) => {
+export const Result = (props) => {
   const name = props.result.name;
   const fullName = `${name.first} ${name.last}`;
   const picture = props.result.picture;
@@ -25,6 +25,3 @@ const Result = (props) => {
     </Link>
   );
 };
-
-export default Result;
-export { Result };

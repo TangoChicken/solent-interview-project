@@ -1,5 +1,5 @@
 import React from "react";
-import StaffProfile from "Components/StaffProfile/StaffProfile";
+import { StaffProfile } from "Components/StaffProfile/StaffProfile";
 
 const Profilepage = (props) => {
   return (
@@ -10,5 +10,3 @@ const Profilepage = (props) => {
 };
 
 export default Profilepage;
-
-export { Profilepage };

@@ -7,7 +7,7 @@ import { Search } from "../Search/Search";
 /**
  * Container component for the profile page
  */
-const StaffProfile = (props) => {
+export const StaffProfile = (props) => {
   return (
     <Container>
       <Search profile />
@@ -15,6 +15,3 @@ const StaffProfile = (props) => {
     </Container>
   );
 };
-
-export default StaffProfile;
-export { StaffProfile };

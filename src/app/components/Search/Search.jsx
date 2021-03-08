@@ -11,7 +11,7 @@ import {
 /**
  * Header component with title and search
  */
-const Search = (props) => {
+export const Search = (props) => {
   return (
     <SearchContainer $profile={props.profile}>
       <Header className="Header">
@@ -22,11 +22,8 @@ const Search = (props) => {
           placeholder="Start typing..."
           role="search"
           aria-label="Search for a staff member"
-        ></SearchBar>
+        />
       </Header>
     </SearchContainer>
   );
 };
-
-export default Search;
-export { Search };
