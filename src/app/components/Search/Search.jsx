@@ -8,6 +8,9 @@ import {
   SearchBar,
 } from "./Search.styled";
 
+/**
+ * Header component with title and search
+ */
 const Search = (props) => {
   return (
     <SearchContainer $profile={props.profile}>

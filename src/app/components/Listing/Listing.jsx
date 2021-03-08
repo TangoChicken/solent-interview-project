@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 import { Result } from "../Result/Result";
 import { ListingContainer } from "./Listing.styled";
 
+/**
+ * List of many results that can be filtered by the search component.
+ * Automatically populates from Random Users API
+ */
 const Listing = (props) => {
   const [randomUsers, setRandomUsers] = useState({});
   const fields = ["name", "email", "dob", "phone", "picture"];
@@ -24,10 +28,12 @@ const Listing = (props) => {
   const renderResults = () => {
     const results = randomUsers.results;
     if (results) {
+      /* Filter out results that do not contain the search term */
       const filtered = results.filter((result) => {
         const fullName = `${result.name.first} ${result.name.last}`;
         return fullName.toLowerCase().includes(props.searchTerm.toLowerCase());
       });
+      /* Map remaining results to a list of Result components */
       const mapped = filtered.map((result, index) => {
         return <Result role="listitem" key={index} result={result} />;
       });

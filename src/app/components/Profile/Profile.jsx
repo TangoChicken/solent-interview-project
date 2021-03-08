@@ -10,6 +10,9 @@ import {
   ProfilePhone,
 } from "./Profile.styled";
 
+/**
+ * A profile page containing basic details for a specific result
+ */
 const Profile = (props) => {
   const name = props.result.name;
   const fullName = `${name.first} ${name.last}`;

@@ -4,6 +4,9 @@ import { Search } from "../Search/Search";
 import { Listing } from "../Listing/Listing";
 import { Container } from "./StaffFinder.styled";
 
+/**
+ * Container component for the home page
+ */
 const StaffFinder = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (

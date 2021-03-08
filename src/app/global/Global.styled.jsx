@@ -9,6 +9,7 @@ export default createGlobalStyle`
         --lighter:#ececec;
         --lightest: #fff;
 
+        /* Constraints for app container */
         --max-width: 800px;
         --min-width: 21rem;
     }
